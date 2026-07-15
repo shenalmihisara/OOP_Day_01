@@ -42,6 +42,12 @@ class Box{
 		volume = length*width*height;
 		System.out.println("Volume of the box :" + volume);
 	}
+	
+	public void printArea(){
+		int Area;
+		Area = length*width*2 + width*height*2 + height*length*2;
+		System.out.println("Area of the box :" + Area);
+	}
 }
 class Demo{
 	public static void main(String[] args){
@@ -56,5 +62,6 @@ class Demo{
 		System.out.println("Volume of the box :" + volume);*/
 		
 		b1.printvolume();
+		b1.printArea();
 	}
 }
