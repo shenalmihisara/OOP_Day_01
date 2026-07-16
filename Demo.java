@@ -96,7 +96,7 @@ class Demo{
 }*/
 
 
-class Box{
+/*class Box{
 	//-------attributes declarations--------
 	private int length;
 	private int width;
@@ -116,12 +116,12 @@ class Box{
 	public void setLength(int length){
 		this.length=length;
 	}
-	/*public void setHeight(int height){
+	public void setHeight(int height){
 		this.height=height;
 	}
 	public void setWidth(int width){
 		this.width=width;
-	}*/
+	}
 	public int getLength(){
 		return length;
 	}
@@ -136,14 +136,53 @@ class Demo{
 	public static void main(String args[]){
 		Box b1=new Box();
 		b1.setSize(12,5,3);
-		
-		b1.setLength(180); 
 		b1.printVolume(); //180
 		System.out.println("Length : "+b1.getLength()); //12
 		System.out.println("Width  : "+b1.getWidth()); //5
 		System.out.println("Height : "+b1.getHeight()); //3
 		
-		//b1.setLength(180); //b1.length=180; //Illegal
+		b1.setLength(180); //b1.length=180; //Illegal
+	}
+}*/
+
+class Date{
+	private int year;
+	private int month;
+	private int day;
+	
+	public void setYear(int year){
+		this.year=year;
+	}
+	public void setMonth(){
+		this.month=month;
+	}
+	public void setDay(){
+		this.day=day;
+	}
+	public int getYear(int year){
+		return	year;
+	}
+	public int getMonth(){
+		return month;
+	}
+	public int getDay(){
+		return day;
+	}
+	
+	public void setDate(int year, int month, int day){
+		this.year=year;
+		this.month=month;
+		this.day=day;
+	}
+	public void printDate(){
+		System.out.println(year + "-" + month + "-" + day);
+	}
+}
+class Demo{
+	public static void main(String[] args){
+		Date d1 = new Date();
+		d1.setDate(2025,9,20);
+		d1.printDate();
 	}
 }
 
