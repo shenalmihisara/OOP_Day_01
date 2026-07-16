@@ -32,7 +32,7 @@ class Demo{
 		System.out.println("DBMS Marks :" + s1.dbmsMarks);
 	}
 }*/
-class Box{
+/*class Box{
 	int length;
 	int width;
 	int height;
@@ -62,16 +62,16 @@ class Demo{
 		b1.width=5;
 		b1.height=3;
 		
-		/*int volume;
+		int volume;
 		volume = b1.length * b1.width * b1.height;
-		System.out.println("Volume of the box :" + volume);*/
+		System.out.println("Volume of the box :" + volume);
 		
 		b1.setSize(12,5,3);
 		
 		b1.printvolume();
 		b1.printArea();
 	}
-}
+}*/
 
 /*class Test{
 	int a;
@@ -94,3 +94,51 @@ class Demo{
 
 	}
 }*/
+
+
+class Box{
+	//-------attributes declarations--------
+	int length;
+	int width;
+	int height;
+	
+	//-------methods declarations--------
+	public void printVolume(){
+		int volume;
+		volume=length*width*height;
+		System.out.println("Volume of the box : "+volume);
+	}
+	public void setSize(int length, int width, int height){
+		this.length=length;
+		this.width=width;
+		this.height=height;
+	}
+	public void setLength(int length){
+		this.length = length;
+	}
+	public void setWidth(int width){
+		this.width = width;
+	}
+	public void setHeight(int height){
+		this.height = height;
+	}
+}
+class Demo{
+	public static void main(String args[]){
+		Box b1=new Box();
+		b1.setSize(12,5,3);
+		b1.printVolume(); //180
+		System.out.println("Length : "+b1.length); //12
+		System.out.println("Width  : "+b1.width); //5
+		System.out.println("Height : "+b1.height); //3
+		
+		b1.setLength(120);
+		b1.setWidth(50);
+		b1.setHeight(30);
+		b1.printVolume(); //180000
+		System.out.println("Length : "+b1.length); //120
+		System.out.println("Width  : "+b1.width); //50
+		System.out.println("Height : "+b1.height); //30
+	}
+}
+
