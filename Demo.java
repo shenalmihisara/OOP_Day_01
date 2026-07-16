@@ -98,9 +98,9 @@ class Demo{
 
 class Box{
 	//-------attributes declarations--------
-	int length;
-	int width;
-	int height;
+	private int length;
+	private int width;
+	private int height;
 	
 	//-------methods declarations--------
 	public void printVolume(){
@@ -114,31 +114,36 @@ class Box{
 		this.height=height;
 	}
 	public void setLength(int length){
-		this.length = length;
+		this.length=length;
+	}
+	/*public void setHeight(int height){
+		this.height=height;
 	}
 	public void setWidth(int width){
-		this.width = width;
+		this.width=width;
+	}*/
+	public int getLength(){
+		return length;
 	}
-	public void setHeight(int height){
-		this.height = height;
+	public int getWidth(){
+		return width;
+	}
+	public int getHeight(){
+	return height;
 	}
 }
 class Demo{
 	public static void main(String args[]){
 		Box b1=new Box();
 		b1.setSize(12,5,3);
-		b1.printVolume(); //180
-		System.out.println("Length : "+b1.length); //12
-		System.out.println("Width  : "+b1.width); //5
-		System.out.println("Height : "+b1.height); //3
 		
-		b1.setLength(120);
-		b1.setWidth(50);
-		b1.setHeight(30);
-		b1.printVolume(); //180000
-		System.out.println("Length : "+b1.length); //120
-		System.out.println("Width  : "+b1.width); //50
-		System.out.println("Height : "+b1.height); //30
+		b1.setLength(180); 
+		b1.printVolume(); //180
+		System.out.println("Length : "+b1.getLength()); //12
+		System.out.println("Width  : "+b1.getWidth()); //5
+		System.out.println("Height : "+b1.getHeight()); //3
+		
+		//b1.setLength(180); //b1.length=180; //Illegal
 	}
 }
 
