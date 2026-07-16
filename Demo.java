@@ -48,19 +48,19 @@ class Box{
 		Area = length*width*2 + width*height*2 + height*length*2;
 		System.out.println("Area of the box :" + Area);
 	}
-	public void setSize(int a, int b, int c){
-		length = a;
-		width = b;
-		height = c;
+	public void setSize(int length, int width, int height){
+		this.length = length;
+		this.width = width;
+		this.height = height;
 	}
 }
 class Demo{
 	public static void main(String[] args){
 		Box b1;
 		b1=new Box();
-		/*b1.length=12;
+		b1.length=12;
 		b1.width=5;
-		b1.height=3;*/
+		b1.height=3;
 		
 		/*int volume;
 		volume = b1.length * b1.width * b1.height;
@@ -72,3 +72,25 @@ class Demo{
 		b1.printArea();
 	}
 }
+
+/*class Test{
+	int a;
+	
+	public void print(){
+		System.out.println(this);
+	}
+}
+class Demo{
+	public static void main(String[] args){
+		Test t1 = new Test();
+		t1.print();
+		System.out.println(t1);
+		
+		System.out.println("---------------------------\n");
+		
+		Test t2 = new Test();
+		t2.print();
+		System.out.println(t2);
+
+	}
+}*/
