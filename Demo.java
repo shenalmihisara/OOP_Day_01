@@ -145,7 +145,7 @@ class Demo{
 	}
 }*/
 
-class Date{
+/*class Date{
 	private int year;
 	private int month;
 	private int day;
@@ -184,5 +184,51 @@ class Demo{
 		d1.setDate(2025,9,20);
 		d1.printDate();
 	}
+}*/
+
+class Box{
+	int length;
+	int width;
+	int height;
+	
+	//-----constroctur-------
+
+	/*Box(){
+		length=0;
+		width=0;
+		height=0;
+	}*/
+	
+	//------default constructor-----------
+	
+	/*Box(){
+		length=10;
+		width=20;
+		height=30;
+	}*/
+	
+	//------parametarized constroctor----------
+	
+	Box(int length, int width, int height){
+		this.length = length;
+		this.width = width;
+		this.height = height;
+	}
+	
+	public void printVolume(){
+		int volume;
+		volume=length*width*height;
+		System.out.println("Volume of the box : "+volume);
+	}
 }
+class Demo{
+	public static void main(String args[]){
+		Box b1=new Box(5,10,15);
+		b1.printVolume(); //?
+		System.out.println("Length : "+b1.length);	// ?
+		System.out.println("Width  : "+b1.width); 	// ?
+		System.out.println("Height : "+b1.height);	// ?
+	}
+}
+
 
