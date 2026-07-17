@@ -190,28 +190,25 @@ class Box{
 	int length;
 	int width;
 	int height;
-
+	
 	Box(){
 		length=1;
 		width=1;
 		height=1;
 		System.out.println("Box()");
 	}
-	
+	Box(int length, int width, int height){
+		this.length=length;
+		this.width=width;
+		this.height=height;
+		System.out.println("Box(int,int,int)");
+	}
 	Box(int length){
 		this.length=length;
-		width=length;
-		height=length;
-		System.out.println("Box(int int int)");
-	}
-
-	Box(int length, int width, int height){
-		this.length = length;
-		this.width = width;
-		this.height = height;
+		this.width=length;
+		this.height=length;
 		System.out.println("Box(int)");
 	}
-	
 	public void printVolume(){
 		int volume;
 		volume=length*width*height;
@@ -221,14 +218,15 @@ class Box{
 class Demo{
 	public static void main(String args[]){
 		Box b1=new Box();
-		b1.printVolume();
+		b1.printVolume(); 
 		
 		Box b2=new Box(10);
 		b2.printVolume();
 		
-		Box b3=new Box(5,10,15);
+		Box b3=new Box(12,5,3);
 		b3.printVolume();
 	}
 }
+
 
 
