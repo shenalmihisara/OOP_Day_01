@@ -228,15 +228,15 @@ class Demo{
 	}
 }*/
 
-class Box{
+/*class Box{
 	int length;
 	int width;
 	int height;
 	
 	Box(){
-		/*length=1;
+		length=1;
 		width=1;
-		height=1;*/
+		height=1;
 		this(1);
 		System.out.println("Box()");
 	}
@@ -247,9 +247,9 @@ class Box{
 		System.out.println("Box(int,int,int)");
 	}
 	Box(int length){
-		/*this.length=length;
+		this.length=length;
 		this.width=length;
-		this.height=length;*/
+		this.height=length;
 		//Box(length,length,length);
 		this(length,length,length);
 		System.out.println("Box(int)");
@@ -264,7 +264,85 @@ class Demo{
 	public static void main(String args[]){
 		Box b1=new Box();
 	}
+}*/
+
+/*class Box{
+	int length=12;
+	int width=5;
+	int height=3;
+	
+	Box(){
+
+	}
+	Box(int length, int width, int height){
+		compiler inserts
+			length=12;
+			width=5;
+			height=3;
+		
+		this.length=length;
+		this.width=width;
+		this.height=height;	
+	}
+	public void printVolume(){
+		int volume;
+		volume=length*width*height;
+		System.out.println("Volume of the box : "+volume);
+	}
 }
+class Demo{
+	public static void main(String args[]){
+		Box b1=new Box();
+		b1.printVolume();
+		
+		Box b2=new Box(120,50,30);
+		b2.printVolume();
+	}
+}*/
+
+/*class A{
+	//int a = 100;
+	
+	A(){
+		
+	}
+	
+	{
+		a = 200;
+	}
+	int a = 100;
+}
+class Demo{
+	public static void main(String[] args){
+		A a = new A();
+		System.out.println(a.a);
+	}
+}*/
+
+class Test{
+	int a;
+	static int b;
+}
+class Demo{
+	public static void main(String[] args){
+		Test t1 = new Test();
+		t1.a = 1;
+		t1.b = 2;
+		
+		Test t2 = new Test();
+		t2.a = 10;
+		t2.b = 20;
+		
+		Test t3 = new Test();
+		t3.a = 100;
+		t3.b = 200;
+		
+		System.out.println("t1 : " + t1.a + " " + t1.b);
+		System.out.println("t2 : " + t2.a + " " + t2.b);
+		System.out.println("t3 : " + t3.a + " " + t3.b);
+	}
+}
+
 
 
 
