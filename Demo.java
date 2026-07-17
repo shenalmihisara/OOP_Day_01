@@ -220,10 +220,10 @@ class Demo{
 		Box b1=new Box();
 		b1.printVolume(); 
 		
-		Box b2=new Box(10);
+		Box b2=new Box(20);
 		b2.printVolume();
 		
-		Box b3=new Box(12,5,3);
+		Box b3=new Box(12,5,330);
 		b3.printVolume();
 	}
 }
